@@ -32,10 +32,18 @@ docker ps
 
 ### Step 5: Install kubectl
 ``` shell
-curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
-chmod +x ./kubectl
-sudo mv ./kubectl /usr/local/bin
-kubectl version --short --client
+# Download the latest version of kubectl
+sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+# Make the kubectl binary executable
+sudo chmod +x kubectl
+
+# Move the kubectl binary to a directory in your PATH
+sudo mv kubectl /usr/local/bin/
+
+# Verify the installation
+kubectl version --client
+
 ```
 
 ### Step 6: Install eksctl
