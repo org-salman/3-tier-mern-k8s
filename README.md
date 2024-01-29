@@ -26,8 +26,8 @@ aws configure
 sudo apt-get update
 sudo apt install docker.io
 sudo systemctl enable --now docker
-docker ps
 sudo chown $USER /var/run/docker.sock
+docker ps
 ```
 
 ### Step 5: Install kubectl
