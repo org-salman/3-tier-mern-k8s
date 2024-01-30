@@ -2,14 +2,12 @@
 - Basic knowledge of Docker, and AWS services.
 - An AWS account with necessary permissions.
 
-## Challenge Steps
-
 ### Step 1: IAM Configuration
 - Create a user `eks-admin` with `AdministratorAccess`.
 - Generate Security Credentials: Access Key and Secret Access Key.
 
 ### Step 2: EC2 Setup
-- Launch an Ubuntu instance in your favourite region (eg. region `us-west-2`).
+- Launch an Ubuntu instance in your favourite region (eg. region `eu-central-1`).
 - SSH into the instance from your local machine.
 
 ### Step 3: Install AWS CLI v2
@@ -103,5 +101,4 @@ eksctl delete cluster --name three-tier-cluster --region eu-central-1
 ## Support
 For any queries or issues, please open an issue in the repository.
 
----
-Happy Learning! 🚀👨‍💻👩‍💻
+
